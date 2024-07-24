@@ -19,9 +19,12 @@
 
         
         function receiveMessage(event) {
-            alert(event.data)
+            console.log({
+                data: event.data,
+                origin: event.origin
+            })
         }
-        window.addEventListener('message', receiveMessage, false);
+        window.addEventListener('message', receiveMessage);
 
         // Después de que el iframe haya cargado, intenta acceder a la cookie
         setTimeout(() => {
