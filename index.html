@@ -15,10 +15,9 @@
 
         
         function receiveMessage(event) {
-            console.log({
-                data: event.data,
-                origin: event.origin
-            })
+            if(event.origin == "https://matchbox-example.tiiny.site") {
+                alert(event.data)
+            }
         }
         window.addEventListener('message', receiveMessage);
 
