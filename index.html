@@ -17,6 +17,12 @@
             return matches ? decodeURIComponent(matches[1]) : undefined;
         }
 
+        
+        function receiveMessage(event) {
+            alert(event.data)
+        }
+        window.addEventListener('message', receiveMessage, false);
+
         // Después de que el iframe haya cargado, intenta acceder a la cookie
         setTimeout(() => {
             let cookieValue = getCookie('username');
