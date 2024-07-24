@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Access Cookie</title>
-</head>
-<body>
-    <h1>Access Cookie in Domain B</h1>
-    <iframe src="https://matchbox-example.tiiny.site/" style="display:none;"></iframe>
     <script>
         // Intentar acceder a la cookie de dominio A desde dominio B
         function getCookie(name) {
@@ -26,15 +22,12 @@
         }
         window.addEventListener('message', receiveMessage);
 
-        // Después de que el iframe haya cargado, intenta acceder a la cookie
-        setTimeout(() => {
-            let cookieValue = getCookie('username');
-            if (cookieValue) {
-                alert('Cookie from Domain A: ' + cookieValue);
-            } else {
-                alert('No cookie found from Domain A');
-            }
-        }, 2000);
+       
     </script>
+</head>
+<body>
+    <h1>Access Cookie in Domain B</h1>
+    <iframe src="https://matchbox-example.tiiny.site/" style="display:none;"></iframe>
+   
 </body>
 </html>
